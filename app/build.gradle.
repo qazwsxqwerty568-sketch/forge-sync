@@ -1,0 +1,13 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.forge.sync'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.forge.sync"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+}
