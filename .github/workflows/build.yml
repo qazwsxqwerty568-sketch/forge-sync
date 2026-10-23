@@ -19,7 +19,7 @@ jobs:
         mv $ANDROID_HOME/cmdline-tools/cmdline-tools $ANDROID_HOME/cmdline-tools/latest
         yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_HOME "platforms;android-33" "build-tools;33.0.0"
     - name: Build with Gradle
-      run: gradle assembleDebug
+      run: gradle wrapper --gradle-version 8.5 && ./gradlew assembleDebug
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
