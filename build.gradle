@@ -1,7 +1,18 @@
-buildscript {
-    repositories { google(); mavenCentral() }
-    dependencies { classpath 'com.android.tools.build:gradle:8.1.0' }
-}
-allprojects {
-    repositories { google(); mavenCentral() }
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.forge.sync'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.forge.sync"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
 }
